@@ -23,8 +23,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore TicTacToe/TicTacToe/TicTacToe.csproj
     - name: Build WinForms app
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration Release TicTacToe/TicTacToe/TicTacToe.csproj
     - name: Publish WinForms app
-      run: dotnet publish --configuration Release --output ./publish
+      run: dotnet publish --configuration Release --output ./publish TicTacToe/TicTacToe/TicTacToe.csproj
     - name: Create executable
-      run: py -c "import shutil; shutil.copyfile('./publish/YourApp.exe', './YourApp.exe')"
+      run: py -c "import shutil; shutil.copyfile('./publish/Ticc.exe', './Ticc.exe')"
